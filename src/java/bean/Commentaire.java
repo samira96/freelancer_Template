@@ -6,14 +6,12 @@
 package bean;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 /**
  *
@@ -27,12 +25,50 @@ public class Commentaire implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column
-    private String texte;
-    @OneToMany(mappedBy = "commentaire")
-    private List<Annonce> annonces;
+    private String text;
     @ManyToOne
-    private Utilisateur utilisateur;
+    private Mission mission;
+    @ManyToOne
+    private Freelance freelance;
 
+    public Commentaire() {
+    }
+
+    public Commentaire(Long id) {
+        this.id = id;
+    }
+
+    public Commentaire(Long id, String text) {
+        this.id = id;
+        this.text = text;
+    }
+
+    
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public Mission getMission() {
+        return mission;
+    }
+
+    public void setMission(Mission mission) {
+        this.mission = mission;
+    }
+
+    public Freelance getFreelance() {
+        return freelance;
+    }
+
+    public void setFreelance(Freelance freelance) {
+        this.freelance = freelance;
+    }
+
+    
     public Long getId() {
         return id;
     }
@@ -63,7 +99,9 @@ public class Commentaire implements Serializable {
 
     @Override
     public String toString() {
-        return "bean.Commentaire[ id=" + id + " ]";
+        return "Commentaire{" + "id=" + id + ", text=" + text + '}';
     }
 
+    
+    
 }
