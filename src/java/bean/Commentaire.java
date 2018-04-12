@@ -43,7 +43,6 @@ public class Commentaire implements Serializable {
         this.text = text;
     }
 
-    
     public String getText() {
         return text;
     }
@@ -68,7 +67,6 @@ public class Commentaire implements Serializable {
         this.freelance = freelance;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -102,6 +100,4 @@ public class Commentaire implements Serializable {
         return "Commentaire{" + "id=" + id + ", text=" + text + '}';
     }
 
-    
-    
 }

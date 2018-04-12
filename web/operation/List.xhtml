@@ -53,7 +53,7 @@
                             </f:facet>
                             <h:outputText value="#{item.admin.nom}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{operationController.prepareCreate}" update=":OperationCreateForm" oncomplete="PF('OperationCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":OperationViewForm" oncomplete="PF('OperationViewDialog').show()" disabled="#{empty operationController.selected}"/>

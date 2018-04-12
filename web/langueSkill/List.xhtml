@@ -45,7 +45,7 @@
                             </f:facet>
                             <h:outputText value="#{item.langue.nom}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{langueSkillController.prepareCreate}" update=":LangueSkillCreateForm" oncomplete="PF('LangueSkillCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":LangueSkillViewForm" oncomplete="PF('LangueSkillViewDialog').show()" disabled="#{empty langueSkillController.selected}"/>

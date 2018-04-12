@@ -46,7 +46,6 @@ public class NotificationCategorie implements Serializable {
         this.type = type;
     }
 
-    
     public String getType() {
         return type;
     }
@@ -87,7 +86,6 @@ public class NotificationCategorie implements Serializable {
         this.admin = admin;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -121,6 +119,4 @@ public class NotificationCategorie implements Serializable {
         return "NotificationCategorie{" + "id=" + id + ", type=" + type + '}';
     }
 
-    
-    
 }

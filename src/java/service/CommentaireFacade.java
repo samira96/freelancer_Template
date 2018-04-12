@@ -28,5 +28,5 @@ public class CommentaireFacade extends AbstractFacade<Commentaire> {
     public CommentaireFacade() {
         super(Commentaire.class);
     }
-    
+
 }

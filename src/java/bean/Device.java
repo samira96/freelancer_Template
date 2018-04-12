@@ -34,7 +34,7 @@ public class Device implements Serializable {
         this.deviceCategorie = deviceCategorie;
         this.browser = browser;
         this.operatingSystem = operatingSystem;
-       
+
     }
 
     public Device(Long id) {
@@ -76,7 +76,6 @@ public class Device implements Serializable {
         this.operatingSystem = operatingSystem;
     }
 
-    
     public User getUser() {
         return user;
     }
@@ -110,6 +109,4 @@ public class Device implements Serializable {
         return "Device{" + "id=" + id + ", deviceCategorie=" + deviceCategorie + ", browser=" + browser + ", operatingSystem=" + operatingSystem + '}';
     }
 
-   
-    
 }

@@ -28,5 +28,5 @@ public class NotificationFacade extends AbstractFacade<Notification> {
     public NotificationFacade() {
         super(Notification.class);
     }
-    
+
 }

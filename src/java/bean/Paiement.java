@@ -23,12 +23,12 @@ public class Paiement implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-     private double montant;
+    private double montant;
     @ManyToOne
     private Compte compte;
     @ManyToOne
     private Admin admin;
-  
+
     @ManyToOne
     private Freelance freelance;
     @ManyToOne
@@ -62,7 +62,6 @@ public class Paiement implements Serializable {
         this.montant = montant;
     }
 
-    
     public double getMontant() {
         return montant;
     }
@@ -87,8 +86,6 @@ public class Paiement implements Serializable {
         this.admin = admin;
     }
 
-
-    
     public Long getId() {
         return id;
     }
@@ -122,6 +119,4 @@ public class Paiement implements Serializable {
         return "Paiement{" + "id=" + id + ", montant=" + montant + '}';
     }
 
-    
-    
 }

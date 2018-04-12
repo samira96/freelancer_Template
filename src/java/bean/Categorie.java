@@ -20,13 +20,12 @@ import javax.persistence.OneToMany;
 @Entity
 public class Categorie implements Serializable {
 
-   
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nom;
-     @OneToMany(mappedBy = "categorie")
+    @OneToMany(mappedBy = "categorie")
     private List<Mission> missions;
 
     public Categorie() {
@@ -41,7 +40,6 @@ public class Categorie implements Serializable {
         this.nom = nom;
     }
 
-     
     public String getNom() {
         return nom;
     }
@@ -58,8 +56,6 @@ public class Categorie implements Serializable {
         this.missions = missions;
     }
 
-
-     
     public Long getId() {
         return id;
     }
@@ -93,6 +89,4 @@ public class Categorie implements Serializable {
         return "Categorie{" + "id=" + id + ", nom=" + nom + '}';
     }
 
- 
-    
 }

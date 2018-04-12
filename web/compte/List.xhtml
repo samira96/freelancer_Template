@@ -39,7 +39,7 @@
                             </f:facet>
                             <h:outputText value="#{item.user.login}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{compteController.prepareCreate}" update=":CompteCreateForm" oncomplete="PF('CompteCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":CompteViewForm" oncomplete="PF('CompteViewDialog').show()" disabled="#{empty compteController.selected}"/>

@@ -46,7 +46,6 @@ public class Compte implements Serializable {
         this.solde = solde;
     }
 
-    
     public Double getSolde() {
         return solde;
     }
@@ -79,7 +78,6 @@ public class Compte implements Serializable {
         this.operations = operations;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -112,6 +110,5 @@ public class Compte implements Serializable {
     public String toString() {
         return "Compte{" + "id=" + id + ", solde=" + solde + '}';
     }
-
 
 }

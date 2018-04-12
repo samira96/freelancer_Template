@@ -51,13 +51,13 @@
                             </f:facet>
                             <h:outputText value="#{item.freelance.nom}"/>
                         </p:column>
-                         <p:column>
+                        <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListPaiementTitle_recruteur}"/>
                             </f:facet>
                             <h:outputText value="#{item.recruteur.nom}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{paiementController.prepareCreate}" update=":PaiementCreateForm" oncomplete="PF('PaiementCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":PaiementViewForm" oncomplete="PF('PaiementViewDialog').show()" disabled="#{empty paiementController.selected}"/>

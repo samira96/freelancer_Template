@@ -28,5 +28,5 @@ public class DiplomeFacade extends AbstractFacade<Diplome> {
     public DiplomeFacade() {
         super(Diplome.class);
     }
-    
+
 }

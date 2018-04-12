@@ -21,7 +21,7 @@
                                            var="userItem"
                                            itemValue="#{userItem}"  itemLabel="#{userItem.login}"/>
                         </p:selectOneMenu>
-                      
+
                     </p:panelGrid>
                     <p:commandButton actionListener="#{compteController.update}" value="#{bundle.Save}" update="display,:CompteListForm:datalist,:growl" oncomplete="handleSubmit(args, 'CompteEditDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="CompteEditDialog.hide()"/>

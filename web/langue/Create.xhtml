@@ -14,7 +14,7 @@
                     <p:panelGrid columns="2" rendered="#{langueController.selected != null}">
                         <p:outputLabel value="#{bundle.CreateLangueLabel_nom}" for="nom" />
                         <p:inputText id="nom" value="#{langueController.selected.nom}" title="#{bundle.CreateLangueTitle_nom}" />
-                       
+
                     </p:panelGrid>
                     <p:commandButton actionListener="#{langueController.create}" value="#{bundle.Save}" update="display,:LangueListForm:datalist,:growl" oncomplete="handleSubmit(args,'LangueCreateDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="LangueCreateDialog.hide()"/>

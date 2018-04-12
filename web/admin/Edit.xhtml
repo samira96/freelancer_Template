@@ -30,7 +30,7 @@
                                            var="userItem"
                                            itemValue="#{userItem}" itemLabel="#{userItem.login}"/>
                         </p:selectOneMenu>
-                        
+
                     </p:panelGrid>
                     <p:commandButton actionListener="#{adminController.update}" value="#{bundle.Save}" update="display,:AdminListForm:datalist,:growl" oncomplete="handleSubmit(args, 'AdminEditDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="AdminEditDialog.hide()"/>

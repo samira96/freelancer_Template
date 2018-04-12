@@ -23,7 +23,7 @@ public class TechnologieSkill implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-     private String niveau;
+    private String niveau;
     private int nbrAnneExper;
     @ManyToOne
     private Freelance freelance;
@@ -43,7 +43,6 @@ public class TechnologieSkill implements Serializable {
         this.nbrAnneExper = nbrAnneExper;
     }
 
-    
     public String getNiveau() {
         return niveau;
     }
@@ -76,8 +75,6 @@ public class TechnologieSkill implements Serializable {
         this.technologie = technologie;
     }
 
-
-    
     public Long getId() {
         return id;
     }
@@ -111,6 +108,4 @@ public class TechnologieSkill implements Serializable {
         return "TechnologieSkill{" + "id=" + id + ", niveau=" + niveau + ", nbrAnneExper=" + nbrAnneExper + '}';
     }
 
-   
-    
 }

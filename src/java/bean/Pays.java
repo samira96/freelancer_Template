@@ -23,13 +23,12 @@ public class Pays implements Serializable {
     @OneToMany(mappedBy = "pays")
     private List<Recruteur> recruteurs;
 
-    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nom;
-@OneToMany(mappedBy = "pays")
+    @OneToMany(mappedBy = "pays")
     private List<Freelance> freelances;
 
     @OneToMany(mappedBy = "pays")
@@ -51,7 +50,6 @@ public class Pays implements Serializable {
         this.nom = nom;
     }
 
-    
     public void setRecruteurs(List<Recruteur> recruteurs) {
         this.recruteurs = recruteurs;
     }
@@ -80,7 +78,6 @@ public class Pays implements Serializable {
         this.admins = admins;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -114,6 +111,4 @@ public class Pays implements Serializable {
         return "Pays{" + "id=" + id + ", nom=" + nom + '}';
     }
 
-   
-    
 }

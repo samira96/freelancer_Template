@@ -20,13 +20,12 @@ import javax.persistence.OneToMany;
 @Entity
 public class Langue implements Serializable {
 
-   
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nom;
-     @OneToMany(mappedBy = "langue")
+    @OneToMany(mappedBy = "langue")
     private List<Mission> missions;
 
     @OneToMany(mappedBy = "langue")
@@ -44,7 +43,6 @@ public class Langue implements Serializable {
         this.nom = nom;
     }
 
-    
     public String getNom() {
         return nom;
     }
@@ -69,8 +67,6 @@ public class Langue implements Serializable {
         this.langueSkills = langueSkills;
     }
 
-
-    
     public Long getId() {
         return id;
     }
@@ -104,5 +100,4 @@ public class Langue implements Serializable {
         return "Langue{" + "id=" + id + ", nom=" + nom + '}';
     }
 
-   
 }

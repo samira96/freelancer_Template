@@ -51,7 +51,7 @@
                             </f:facet>
                             <h:outputText value="#{item.technologie.nom}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{technologieSkillController.prepareCreate}" update=":TechnologieSkillCreateForm" oncomplete="PF('TechnologieSkillCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":TechnologieSkillViewForm" oncomplete="PF('TechnologieSkillViewDialog').show()" disabled="#{empty technologieSkillController.selected}"/>

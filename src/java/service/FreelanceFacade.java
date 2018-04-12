@@ -31,16 +31,15 @@ public class FreelanceFacade extends AbstractFacade<Freelance> {
     public FreelanceFacade() {
         super(Freelance.class);
     }
-    
-      public List<Freelance> search(Pays pays,  Double max, Double min, String name) {
+
+    public List<Freelance> search(Pays pays, Double max, Double min, String name) {
         String requette = "SELECT f FROM Freelance f where 1=1";
-       
+
         requette += SearchUtil.addConstraintMinMax("f", "tarif", max, min);
         if (pays != null) {
             requette += SearchUtil.addConstraint("f", "pays.nom", "=", pays.getNom());
         }
         requette += SearchUtil.addConstraint("f", "nom", "=", name);
-       
 
         return em.createQuery(requette).getResultList();
     }

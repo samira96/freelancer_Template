@@ -42,7 +42,6 @@ public class TechnologieMission implements Serializable {
         this.nom = nom;
     }
 
-    
     public String getNom() {
         return nom;
     }
@@ -67,8 +66,6 @@ public class TechnologieMission implements Serializable {
         this.technologie = technologie;
     }
 
-
-    
     public Long getId() {
         return id;
     }
@@ -102,6 +99,4 @@ public class TechnologieMission implements Serializable {
         return "TechnologieMission{" + "id=" + id + ", nom=" + nom + '}';
     }
 
-   
-    
 }

@@ -23,7 +23,7 @@ public class LangueSkill implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-     private String niveau;
+    private String niveau;
     @ManyToOne
     private Freelance freelance;
     @ManyToOne
@@ -41,7 +41,6 @@ public class LangueSkill implements Serializable {
         this.niveau = niveau;
     }
 
-    
     public String getNiveau() {
         return niveau;
     }
@@ -66,9 +65,6 @@ public class LangueSkill implements Serializable {
         this.langue = langue;
     }
 
-    
-
-    
     public Long getId() {
         return id;
     }
@@ -102,6 +98,4 @@ public class LangueSkill implements Serializable {
         return "LangueSkill{" + "id=" + id + ", niveau=" + niveau + '}';
     }
 
-    
-    
 }

@@ -56,7 +56,6 @@ public class RecruteurController implements Serializable {
     public void setPays(Pays pays) {
         this.pays = pays;
     }
-    
 
     public RecruteurController() {
     }
@@ -95,9 +94,11 @@ public class RecruteurController implements Serializable {
     public void update() {
         persist(PersistAction.UPDATE, ResourceBundle.getBundle("/Bundle").getString("RecruteurUpdated"));
     }
-public void search() {
-      items = ejbFacade.search(pays,user);
+
+    public void search() {
+        items = ejbFacade.search(pays, user);
     }
+
     public void destroy() {
         persist(PersistAction.DELETE, ResourceBundle.getBundle("/Bundle").getString("RecruteurDeleted"));
         if (!JsfUtil.isValidationFailed()) {

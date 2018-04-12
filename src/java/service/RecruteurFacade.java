@@ -32,16 +32,17 @@ public class RecruteurFacade extends AbstractFacade<Recruteur> {
     public RecruteurFacade() {
         super(Recruteur.class);
     }
-    public List<Recruteur> search(Pays pays,User user) {
+
+    public List<Recruteur> search(Pays pays, User user) {
         String requette = "SELECT r FROM Recruteur r where 1=1";
-       
+
         if (pays != null) {
             requette += SearchUtil.addConstraint("r", "pays.nom", "=", pays.getNom());
         }
         if (user != null) {
             requette += SearchUtil.addConstraint("r", "user.login", "=", user.getLogin());
         }
-        
+
         return em.createQuery(requette).getResultList();
     }
 }

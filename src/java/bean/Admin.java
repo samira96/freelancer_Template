@@ -63,7 +63,6 @@ public class Admin implements Serializable {
         this.prenom = prenom;
     }
 
-    
     public String getNom() {
         return nom;
     }
@@ -144,7 +143,6 @@ public class Admin implements Serializable {
         this.freelances = freelances;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -177,7 +175,5 @@ public class Admin implements Serializable {
     public String toString() {
         return "Admin{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + '}';
     }
-
-    
 
 }

@@ -33,7 +33,7 @@
                             </f:facet>
                             <h:outputText value="#{item.nom}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{paysController.prepareCreate}" update=":PaysCreateForm" oncomplete="PF('PaysCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":PaysViewForm" oncomplete="PF('PaysViewDialog').show()" disabled="#{empty paysController.selected}"/>

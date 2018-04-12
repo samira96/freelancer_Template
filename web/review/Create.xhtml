@@ -28,7 +28,7 @@
                                            var="freelanceItem"
                                            itemValue="#{freelanceItem}"  itemLabel="#{freelanceItem.nom}"/>
                         </p:selectOneMenu>
-                     
+
                     </p:panelGrid>
                     <p:commandButton actionListener="#{reviewController.create}" value="#{bundle.Save}" update="display,:ReviewListForm:datalist,:growl" oncomplete="handleSubmit(args,'ReviewCreateDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="ReviewCreateDialog.hide()"/>

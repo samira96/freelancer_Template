@@ -51,7 +51,7 @@
                             </f:facet>
                             <h:outputText value="#{item.user.login}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{adminController.prepareCreate}" update=":AdminCreateForm" oncomplete="PF('AdminCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":AdminViewForm" oncomplete="PF('AdminViewDialog').show()" disabled="#{empty adminController.selected}"/>

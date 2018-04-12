@@ -12,10 +12,10 @@
             <h:form id="MissionCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{missionController.selected != null}">
-                       
+
                         <p:outputLabel value="#{bundle.CreateMissionLabel_titre}" for="titre" />
                         <p:inputText id="titre" value="#{missionController.selected.titre}" title="#{bundle.CreateMissionTitle_titre}" />
-                         <p:outputLabel value="#{bundle.CreateMissionLabel_avancement}" for="avancement" />
+                        <p:outputLabel value="#{bundle.CreateMissionLabel_avancement}" for="avancement" />
                         <p:inputText id="avancement" value="#{missionController.selected.avancement}" title="#{bundle.CreateMissionTitle_avancement}" />
                         <p:outputLabel value="#{bundle.CreateMissionLabel_commentaire}" for="commentaire" />
                         <p:inputText id="commentaire" value="#{missionController.selected.commentaire}" title="#{bundle.CreateMissionTitle_commentaire}" />
@@ -59,7 +59,7 @@
                                            var="diplomeItem"
                                            itemValue="#{diplomeItem}" itemLabel="#{diplomeItem.niveau}"/>
                         </p:selectOneMenu>
-                       
+
                     </p:panelGrid>
                     <p:commandButton actionListener="#{missionController.create}" value="#{bundle.Save}" update="display,:MissionListForm:datalist,:growl" oncomplete="handleSubmit(args,'MissionCreateDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="MissionCreateDialog.hide()"/>

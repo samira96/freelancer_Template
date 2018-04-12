@@ -55,7 +55,7 @@
                                            var="userItem"
                                            itemValue="#{userItem}" itemLabel="#{userItem.login}"/>
                         </p:selectOneMenu>
-                        
+
                     </p:panelGrid>
                     <p:commandButton actionListener="#{freelanceController.update}" value="#{bundle.Save}" update="display,:FreelanceListForm:datalist,:growl" oncomplete="handleSubmit(args, 'FreelanceEditDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="FreelanceEditDialog.hide()"/>

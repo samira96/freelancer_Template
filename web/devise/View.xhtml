@@ -14,7 +14,7 @@
                     <p:panelGrid columns="2" rendered="#{deviseController.selected != null}">
                         <h:outputText value="#{bundle.ViewDeviseLabel_nom}"/>
                         <h:outputText value="#{deviseController.selected.nom}" title="#{bundle.ViewDeviseTitle_nom}"/>
-                        
+
                     </p:panelGrid>
                     <p:commandButton value="#{bundle.Close}" onclick="DeviseViewDialog.hide()"/>
                 </h:panelGroup>

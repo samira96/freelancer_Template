@@ -28,5 +28,5 @@ public class NotificationCategorieFacade extends AbstractFacade<NotificationCate
     public NotificationCategorieFacade() {
         super(NotificationCategorie.class);
     }
-    
+
 }

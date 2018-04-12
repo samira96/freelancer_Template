@@ -89,9 +89,6 @@ public class Mission implements Serializable {
         this.avancement = avancement;
     }
 
-   
-
-    
     public String getTitre() {
         return titre;
     }
@@ -228,7 +225,6 @@ public class Mission implements Serializable {
         this.commentaires = commentaires;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -261,9 +257,5 @@ public class Mission implements Serializable {
     public String toString() {
         return "Mission{" + "id=" + id + ", titre=" + titre + ", commentaire=" + commentaire + ", minBudget=" + minBudget + ", maxBudget=" + maxBudget + ", isAccepted=" + isAccepted + ", avancement=" + avancement + '}';
     }
-
-  
-
-   
 
 }

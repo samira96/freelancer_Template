@@ -12,29 +12,29 @@
         <ui:define name="title">
             <h:outputText value="#{bundle.ListMissionTitle}"></h:outputText>
         </ui:define>
-        
-       
+
+
         <ui:define name="body">
             <h:form>
-                
-            <h:panelGroup>
-              
-                        <p:panelGrid columns="8" >
-                        
+
+                <h:panelGroup>
+
+                    <p:panelGrid columns="8" >
+
                         <p:outputLabel value="#{bundle.CreateMissionLabel_minBudget}" for="min" />
                         <p:inputText id="min" value="#{missionController.min}" title="#{bundle.CreateMissionTitle_minBudget}" />
                         <p:outputLabel value="#{bundle.CreateMissionLabel_maxBudget}" for="max" />
                         <p:inputText id="max" value="#{missionController.max}" title="#{bundle.CreateMissionTitle_maxBudget}" />
-                       
+
                         <p:outputLabel value="#{bundle.CreateMissionLabel_etat}" for="etat" />
                         <p:inputText id="etat" value="#{missionController.etat}" title="#{bundle.CreateMissionTitle_etat}" />
-                       
+
                         <p:outputLabel value="#{bundle.CreateMissionLabel_recruteur}" for="recruteur" />
                         <p:selectOneMenu id="recruteur" value="#{missionController.recruteur}" >
                             <f:selectItems value="#{recruteurController.itemsAvailableSelectOne}"
                                            var="recruteurItem"
                                            itemValue="#{recruteurItem}" itemLabel="#{recruteurItem.nom}" />
-                            
+
                         </p:selectOneMenu>
                         <p:outputLabel value="#{bundle.CreateMissionLabel_categorie}" for="categorie" />
                         <p:selectOneMenu id="categorie" value="#{missionController.categorie}" >
@@ -42,18 +42,18 @@
                                            var="categorieItem"
                                            itemValue="#{categorieItem}" itemLabel="#{categorieItem.nom}"/>
                         </p:selectOneMenu>
-                       
+
                         <p:outputLabel value="#{bundle.CreateMissionLabel_langue}" for="langue" />
                         <p:selectOneMenu id="langue" value="#{missionController.langue}" >
                             <f:selectItems value="#{langueController.itemsAvailableSelectOne}"
                                            var="langueItem"
                                            itemValue="#{langueItem}" itemLabel="#{langueItem.nom}"/>
                         </p:selectOneMenu>
-                       
+
                         <p:commandButton  actionListener="#{missionController.search()}" value="Search" update=":MissionListForm:datalist"/>
-                   </p:panelGrid>
-            </h:panelGroup>
-                </h:form>
+                    </p:panelGrid>
+                </h:panelGroup>
+            </h:form>
             <h:form id="MissionListForm">
                 <p:panel header="#{bundle.ListMissionTitle}">
                     <p:dataTable id="datalist" value="#{missionController.items}" var="item"
@@ -67,7 +67,7 @@
                         <p:ajax event="rowSelect"   update="createButton viewButton editButton deleteButton"/>
                         <p:ajax event="rowUnselect" update="createButton viewButton editButton deleteButton"/>
 
-                       
+
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListMissionTitle_titre}"/>
@@ -86,7 +86,7 @@
                             </f:facet>
                             <h:outputText value="#{item.commentaire}"/>
                         </p:column>
-                       
+
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListMissionTitle_maxBudget}"/>
@@ -147,7 +147,7 @@
                             </f:facet>
                             <h:outputText value="#{item.diplome.niveau}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{missionController.prepareCreate}" update=":MissionCreateForm" oncomplete="PF('MissionCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":MissionViewForm" oncomplete="PF('MissionViewDialog').show()" disabled="#{empty missionController.selected}"/>

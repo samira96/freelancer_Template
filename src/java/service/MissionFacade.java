@@ -33,11 +33,12 @@ public class MissionFacade extends AbstractFacade<Mission> {
     public MissionFacade() {
         super(Mission.class);
     }
-     public List<Mission> search(Recruteur recruteur,  Double max, Double min, Langue langue, Categorie categorie, String etat) {
+
+    public List<Mission> search(Recruteur recruteur, Double max, Double min, Langue langue, Categorie categorie, String etat) {
         String requette = "SELECT m FROM Mission m where 1=1";
-       
+
         requette += SearchUtil.addConstraintMinMax("m", "maxBudget", max, min);
-         requette += SearchUtil.addConstraint("m", "avancement", "=", etat);
+        requette += SearchUtil.addConstraint("m", "avancement", "=", etat);
         if (recruteur != null) {
             requette += SearchUtil.addConstraint("m", "recruteur.nom", "=", recruteur.getNom());
         }

@@ -33,7 +33,7 @@
                             </f:facet>
                             <h:outputText value="#{item.nom}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{technologieController.prepareCreate}" update=":TechnologieCreateForm" oncomplete="PF('TechnologieCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":TechnologieViewForm" oncomplete="PF('TechnologieViewDialog').show()" disabled="#{empty technologieController.selected}"/>

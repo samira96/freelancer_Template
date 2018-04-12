@@ -28,9 +28,9 @@ public class FreelanceController implements Serializable {
     private service.FreelanceFacade ejbFacade;
     private List<Freelance> items = null;
     private Freelance selected;
-   
- private Pays pays;
-    private Double max; 
+
+    private Pays pays;
+    private Double max;
     private Double min;
     private String name;
 
@@ -111,9 +111,11 @@ public class FreelanceController implements Serializable {
     public void update() {
         persist(PersistAction.UPDATE, ResourceBundle.getBundle("/Bundle").getString("FreelanceUpdated"));
     }
- public void search() {
-      items = ejbFacade.search(pays, max, min, name);
+
+    public void search() {
+        items = ejbFacade.search(pays, max, min, name);
     }
+
     public void destroy() {
         persist(PersistAction.DELETE, ResourceBundle.getBundle("/Bundle").getString("FreelanceDeleted"));
         if (!JsfUtil.isValidationFailed()) {

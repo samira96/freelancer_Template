@@ -73,7 +73,6 @@ public class Freelance implements Serializable {
         this.tarif = tarif;
     }
 
-    
     public String getNom() {
         return nom;
     }
@@ -186,7 +185,6 @@ public class Freelance implements Serializable {
         this.commentaires = commentaires;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -219,7 +217,5 @@ public class Freelance implements Serializable {
     public String toString() {
         return "Freelance{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", tel=" + tel + ", tarif=" + tarif + '}';
     }
-
-    
 
 }

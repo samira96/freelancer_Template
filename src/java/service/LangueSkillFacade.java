@@ -28,5 +28,5 @@ public class LangueSkillFacade extends AbstractFacade<LangueSkill> {
     public LangueSkillFacade() {
         super(LangueSkill.class);
     }
-    
+
 }

@@ -14,7 +14,7 @@
                     <p:panelGrid columns="2" rendered="#{diplomeController.selected != null}">
                         <h:outputText value="#{bundle.ViewDiplomeLabel_nom}"/>
                         <h:outputText value="#{diplomeController.selected.nom}" title="#{bundle.ViewDiplomeTitle_nom}"/>
-                       
+
                     </p:panelGrid>
                     <p:commandButton value="#{bundle.Close}" onclick="DiplomeViewDialog.hide()"/>
                 </h:panelGroup>

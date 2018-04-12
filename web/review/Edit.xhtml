@@ -30,7 +30,7 @@
                                            var="freelanceItem"
                                            itemValue="#{freelanceItem}" itemLabel="#{freelanceItem.nom}"/>
                         </p:selectOneMenu>
-                      
+
                     </p:panelGrid>
                     <p:commandButton actionListener="#{reviewController.update}" value="#{bundle.Save}" update="display,:ReviewListForm:datalist,:growl" oncomplete="handleSubmit(args, 'ReviewEditDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="ReviewEditDialog.hide()"/>

@@ -22,7 +22,7 @@ public class User implements Serializable {
     @Id
     private String login;
     private String passeword;
-     private int blocked;
+    private int blocked;
     private int nbrCnx;
     private int type;
     private boolean mdpChanged;
@@ -68,7 +68,6 @@ public class User implements Serializable {
     public void setDevices(List<Device> devices) {
         this.devices = devices;
     }
-    
 
     public String getPasseword() {
         return passeword;
@@ -99,7 +98,6 @@ public class User implements Serializable {
         this.passeword = passeword;
     }
 
-    
     public String getLogin() {
         return login;
     }
@@ -133,8 +131,4 @@ public class User implements Serializable {
         return "User{" + "login=" + login + ", passeword=" + passeword + ", blocked=" + blocked + ", nbrCnx=" + nbrCnx + ", type=" + type + ", mdpChanged=" + mdpChanged + '}';
     }
 
-   
-
-    
-    
 }

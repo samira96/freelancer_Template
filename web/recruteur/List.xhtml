@@ -12,15 +12,15 @@
         <ui:define name="title">
             <h:outputText value="#{bundle.ListRecruteurTitle}"></h:outputText>
         </ui:define>
- <ui:define name="body">
-            
-         <h:form>
-                
-            <h:panelGroup>
-            
-                        <p:panelGrid columns="6" >
-    
-                       
+        <ui:define name="body">
+
+            <h:form>
+
+                <h:panelGroup>
+
+                    <p:panelGrid columns="6" >
+
+
                         <p:outputLabel value="#{bundle.CreateRecruteurLabel_Pays}" for="pays" />
                         <p:selectOneMenu id="pays" value="#{recruteurController.pays}" >
                             <f:selectItems value="#{paysController.itemsAvailableSelectOne}"
@@ -33,14 +33,14 @@
                                            var="userItem"
                                            itemValue="#{userItem}" itemLabel="#{userItem.login}" />
                         </p:selectOneMenu>
-                        
-                       
+
+
                         <p:commandButton  actionListener="#{recruteurController.search()}" value="Search" update=":RecruteurListForm:datalist"/>
-                   </p:panelGrid>
-            </h:panelGroup>
-                </h:form>
-        
-      
+                    </p:panelGrid>
+                </h:panelGroup>
+            </h:form>
+
+
             <h:form id="RecruteurListForm">
                 <p:panel header="#{bundle.ListRecruteurTitle}">
                     <p:dataTable id="datalist" value="#{recruteurController.items}" var="item"
@@ -78,14 +78,14 @@
                             </f:facet>
                             <h:outputText value="#{item.pays.nom}"/>
                         </p:column>
-                        
+
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListRecruteurTitle_user}"/>
                             </f:facet>
                             <h:outputText value="#{item.user.login}"/>
                         </p:column>
-                        
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{recruteurController.prepareCreate}" update=":RecruteurCreateForm" oncomplete="PF('RecruteurCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":RecruteurViewForm" oncomplete="PF('RecruteurViewDialog').show()" disabled="#{empty recruteurController.selected}"/>

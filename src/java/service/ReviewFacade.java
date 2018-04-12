@@ -28,5 +28,5 @@ public class ReviewFacade extends AbstractFacade<Review> {
     public ReviewFacade() {
         super(Review.class);
     }
-    
+
 }

@@ -20,7 +20,6 @@ import javax.persistence.OneToMany;
 @Entity
 public class Technologie implements Serializable {
 
-    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,7 +31,6 @@ public class Technologie implements Serializable {
     public Technologie() {
     }
 
-    
     public Technologie(Long id) {
         this.id = id;
     }
@@ -42,7 +40,6 @@ public class Technologie implements Serializable {
         this.nom = nom;
     }
 
-    
     public String getNom() {
         return nom;
     }
@@ -58,8 +55,6 @@ public class Technologie implements Serializable {
     public void setTechnologieSkills(List<TechnologieSkill> technologieSkills) {
         this.technologieSkills = technologieSkills;
     }
-
-    
 
     public Long getId() {
         return id;
@@ -94,6 +89,4 @@ public class Technologie implements Serializable {
         return "Technologie{" + "id=" + id + ", nom=" + nom + '}';
     }
 
-    
-    
 }

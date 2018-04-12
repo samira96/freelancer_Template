@@ -20,7 +20,6 @@ import javax.persistence.OneToMany;
 @Entity
 public class Diplome implements Serializable {
 
-    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -44,7 +43,6 @@ public class Diplome implements Serializable {
         this.nom = nom;
     }
 
-    
     public String getNom() {
         return nom;
     }
@@ -69,9 +67,6 @@ public class Diplome implements Serializable {
         this.freelances = freelances;
     }
 
-    
-
-    
     public Long getId() {
         return id;
     }
@@ -105,6 +100,4 @@ public class Diplome implements Serializable {
         return "Diplome{" + "id=" + id + ", nom=" + nom + '}';
     }
 
-    
-    
 }

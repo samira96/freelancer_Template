@@ -14,7 +14,7 @@
                     <p:panelGrid columns="2" rendered="#{technologieController.selected != null}">
                         <h:outputText value="#{bundle.ViewTechnologieLabel_nom}"/>
                         <h:outputText value="#{technologieController.selected.nom}" title="#{bundle.ViewTechnologieTitle_nom}"/>
-                       
+
                     </p:panelGrid>
                     <p:commandButton value="#{bundle.Close}" onclick="TechnologieViewDialog.hide()"/>
                 </h:panelGroup>

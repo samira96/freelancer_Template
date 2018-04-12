@@ -43,7 +43,6 @@ public class Review implements Serializable {
         this.commentaire = commentaire;
     }
 
-    
     public int getScore() {
         return score;
     }
@@ -76,7 +75,6 @@ public class Review implements Serializable {
         this.freelance = freelance;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -110,6 +108,4 @@ public class Review implements Serializable {
         return "Review{" + "id=" + id + ", score=" + score + ", commentaire=" + commentaire + '}';
     }
 
-   
-    
 }

@@ -30,8 +30,8 @@ public class MissionController implements Serializable {
     private service.MissionFacade ejbFacade;
     private List<Mission> items = null;
     private Mission selected;
- private Recruteur recruteur;
-    private Double max; 
+    private Recruteur recruteur;
+    private Double max;
     private Double min;
     private Langue langue;
     private Categorie categorie;
@@ -92,7 +92,7 @@ public class MissionController implements Serializable {
     public void setCategorie(Categorie categorie) {
         this.categorie = categorie;
     }
-    
+
     public MissionController() {
     }
 
@@ -130,9 +130,11 @@ public class MissionController implements Serializable {
     public void update() {
         persist(PersistAction.UPDATE, ResourceBundle.getBundle("/Bundle").getString("MissionUpdated"));
     }
- public void search() {
-      items = ejbFacade.search(recruteur, max, min, langue, categorie,etat);
+
+    public void search() {
+        items = ejbFacade.search(recruteur, max, min, langue, categorie, etat);
     }
+
     public void destroy() {
         persist(PersistAction.DELETE, ResourceBundle.getBundle("/Bundle").getString("MissionDeleted"));
         if (!JsfUtil.isValidationFailed()) {

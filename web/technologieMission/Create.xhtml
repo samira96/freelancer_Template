@@ -26,7 +26,7 @@
                                            var="technologieItem"
                                            itemValue="#{technologieItem}" itemLabel="#{technologieItem.nom}"/>
                         </p:selectOneMenu>
-                       
+
                     </p:panelGrid>
                     <p:commandButton actionListener="#{technologieMissionController.create}" value="#{bundle.Save}" update="display,:TechnologieMissionListForm:datalist,:growl" oncomplete="handleSubmit(args,'TechnologieMissionCreateDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="TechnologieMissionCreateDialog.hide()"/>

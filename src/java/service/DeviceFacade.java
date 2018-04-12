@@ -28,5 +28,5 @@ public class DeviceFacade extends AbstractFacade<Device> {
     public DeviceFacade() {
         super(Device.class);
     }
-    
+
 }

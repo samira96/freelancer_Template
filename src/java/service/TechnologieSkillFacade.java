@@ -28,5 +28,5 @@ public class TechnologieSkillFacade extends AbstractFacade<TechnologieSkill> {
     public TechnologieSkillFacade() {
         super(TechnologieSkill.class);
     }
-    
+
 }

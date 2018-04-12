@@ -42,7 +42,7 @@
                                            var="recruteurItem"
                                            itemValue="#{recruteurItem}" itemLabel="#{recruteurItem.nom}"/>
                         </p:selectOneMenu>
-                       
+
                     </p:panelGrid>
                     <p:commandButton actionListener="#{paiementController.update}" value="#{bundle.Save}" update="display,:PaiementListForm:datalist,:growl" oncomplete="handleSubmit(args, 'PaiementEditDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="PaiementEditDialog.hide()"/>

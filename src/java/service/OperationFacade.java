@@ -28,5 +28,5 @@ public class OperationFacade extends AbstractFacade<Operation> {
     public OperationFacade() {
         super(Operation.class);
     }
-    
+
 }

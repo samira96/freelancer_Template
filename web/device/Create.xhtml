@@ -12,7 +12,7 @@
             <h:form id="DeviceCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{deviceController.selected != null}">
-                      
+
                         <p:outputLabel value="#{bundle.CreateDeviceLabel_deviceCategorie}" for="deviceCategorie" />
                         <p:inputText id="deviceCategorie" value="#{deviceController.selected.deviceCategorie}" title="#{bundle.CreateDeviceTitle_deviceCategorie}" />
                         <p:outputLabel value="#{bundle.CreateDeviceLabel_browser}" for="browser" />

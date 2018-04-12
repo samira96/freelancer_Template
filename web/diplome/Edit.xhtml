@@ -14,7 +14,7 @@
                     <p:panelGrid columns="2" rendered="#{diplomeController.selected != null}">
                         <p:outputLabel value="#{bundle.EditDiplomeLabel_nom}" for="nom" />
                         <p:inputText id="nom" value="#{diplomeController.selected.nom}" title="#{bundle.EditDiplomeTitle_nom}" />
-                      
+
                     </p:panelGrid>
                     <p:commandButton actionListener="#{diplomeController.update}" value="#{bundle.Save}" update="display,:DiplomeListForm:datalist,:growl" oncomplete="handleSubmit(args, 'DiplomeEditDialog');"/>
                     <p:commandButton value="#{bundle.Cancel}" onclick="DiplomeEditDialog.hide()"/>

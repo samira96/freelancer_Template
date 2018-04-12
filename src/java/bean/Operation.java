@@ -25,7 +25,7 @@ public class Operation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-     private double montant;
+    private double montant;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateOperation;
     @ManyToOne
@@ -46,7 +46,6 @@ public class Operation implements Serializable {
         this.dateOperation = dateOperation;
     }
 
-    
     public double getMontant() {
         return montant;
     }
@@ -79,7 +78,6 @@ public class Operation implements Serializable {
         this.admin = admin;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -113,6 +111,4 @@ public class Operation implements Serializable {
         return "Operation{" + "id=" + id + ", montant=" + montant + ", dateOperation=" + dateOperation + '}';
     }
 
-   
-    
 }

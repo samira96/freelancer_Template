@@ -28,5 +28,5 @@ public class DeviseFacade extends AbstractFacade<Devise> {
     public DeviseFacade() {
         super(Devise.class);
     }
-    
+
 }

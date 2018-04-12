@@ -14,7 +14,7 @@
                     <p:panelGrid columns="2" rendered="#{langueController.selected != null}">
                         <h:outputText value="#{bundle.ViewLangueLabel_nom}"/>
                         <h:outputText value="#{langueController.selected.nom}" title="#{bundle.ViewLangueTitle_nom}"/>
-                        
+
                     </p:panelGrid>
                     <p:commandButton value="#{bundle.Close}" onclick="LangueViewDialog.hide()"/>
                 </h:panelGroup>

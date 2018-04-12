@@ -33,7 +33,7 @@
                             </f:facet>
                             <h:outputText value="#{item.nom}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{langueController.prepareCreate}" update=":LangueCreateForm" oncomplete="PF('LangueCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":LangueViewForm" oncomplete="PF('LangueViewDialog').show()" disabled="#{empty langueController.selected}"/>

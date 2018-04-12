@@ -22,17 +22,16 @@ import javax.persistence.Temporal;
 @Entity
 public class Notification implements Serializable {
 
-   
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-     private String text;
+    private String text;
     @Temporal(javax.persistence.TemporalType.DATE)
-     private Date dateNotification;
+    private Date dateNotification;
     @Temporal(javax.persistence.TemporalType.DATE)
-     private Date dateVue;
-     @OneToMany(mappedBy = "notification")
+    private Date dateVue;
+    @OneToMany(mappedBy = "notification")
     private List<NotificationCategorie> notificationCategories;
 
     public Notification() {
@@ -49,7 +48,6 @@ public class Notification implements Serializable {
         this.dateVue = dateVue;
     }
 
-     
     public String getText() {
         return text;
     }
@@ -82,8 +80,6 @@ public class Notification implements Serializable {
         this.notificationCategories = notificationCategories;
     }
 
-
-     
     public Long getId() {
         return id;
     }
@@ -117,6 +113,4 @@ public class Notification implements Serializable {
         return "Notification{" + "id=" + id + ", text=" + text + ", dateNotification=" + dateNotification + ", dateVue=" + dateVue + '}';
     }
 
-    
-    
 }

@@ -33,7 +33,7 @@
                             </f:facet>
                             <h:outputText value="#{item.nom}"/>
                         </p:column>
-                       
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{diplomeController.prepareCreate}" update=":DiplomeCreateForm" oncomplete="PF('DiplomeCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":DiplomeViewForm" oncomplete="PF('DiplomeViewDialog').show()" disabled="#{empty diplomeController.selected}"/>

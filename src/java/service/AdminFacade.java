@@ -28,5 +28,5 @@ public class AdminFacade extends AbstractFacade<Admin> {
     public AdminFacade() {
         super(Admin.class);
     }
-    
+
 }

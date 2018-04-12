@@ -22,12 +22,11 @@ import javax.persistence.OneToOne;
 @Entity
 public class Recruteur implements Serializable {
 
-    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-     private String prenom;
+    private String prenom;
     private String nom;
     private double tel;
     @ManyToOne
@@ -57,7 +56,6 @@ public class Recruteur implements Serializable {
         this.tel = tel;
     }
 
-    
     public String getPrenom() {
         return prenom;
     }
@@ -122,8 +120,6 @@ public class Recruteur implements Serializable {
         this.missions = missions;
     }
 
-
-    
     public Long getId() {
         return id;
     }
@@ -157,6 +153,4 @@ public class Recruteur implements Serializable {
         return "Recruteur{" + "id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", tel=" + tel + '}';
     }
 
-    
-    
 }
